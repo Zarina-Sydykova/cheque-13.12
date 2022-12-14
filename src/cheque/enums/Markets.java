@@ -1,2 +1,8 @@
-package cheque.enums;public enum Markets {
+package cheque.enums;
+
+public enum Markets {
+    FRUNZE,
+    GLOBUS,
+    NARODNIY,
+    ALMA;
 }
