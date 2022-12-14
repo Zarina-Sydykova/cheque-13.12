@@ -5,6 +5,7 @@ import cheque.enums.Products;
 import java.math.BigDecimal;
 
 public class Markets {
+    public static Markets[] values;
     private Markets markets;
     private BigDecimal bankAccount;
     private String address;
@@ -16,6 +17,11 @@ public class Markets {
         this.address = address;
         this.products = products;
     }
+
+    public static Markets valueOf(String toUpperCase) {
+        return null;
+    }
+
 
     public Markets markets() {
         return markets;

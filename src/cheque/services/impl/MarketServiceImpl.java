@@ -1,12 +1,13 @@
 package cheque.services.impl;
 
+import cheque.enums.Products;
 import cheque.services.MarketService;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MarketServiceImpl implements MarketService {
-    @Override
-    public Integer discount() {
-        return null;
-    }
+    List<Products>products=new ArrayList<>();
 
     @Override
     public Integer stock() {
@@ -15,6 +16,9 @@ public class MarketServiceImpl implements MarketService {
 
     @Override
     public String getAllProducts() {
+        for (Products product : products) {
+            System.out.println(product.name());
+        }
         return null;
     }
 

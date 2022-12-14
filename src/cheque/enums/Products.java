@@ -32,4 +32,8 @@ public enum Products {
                 "baalary=" + baalary +
                 '}';
     }
+
+    public Integer getSum() {
+        return 0;
+    }
 }

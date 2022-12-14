@@ -1,5 +1,7 @@
 import cheque.classes.Clients;
+import cheque.classes.Markets;
 import cheque.services.impl.ClientServiceImpl;
+import cheque.services.impl.MarketServiceImpl;
 
 import java.util.List;
 import java.util.Scanner;
@@ -27,14 +29,15 @@ public class Main {
 * алган адамдын акчасы азайып магазиндин акчасы кобоюшу керек.Жок дегенде 10 метод ойлоп жазыныздар.*/
         Scanner in = new Scanner(System.in);
         ClientServiceImpl service = new ClientServiceImpl();
+        MarketServiceImpl service1 = new MarketServiceImpl();
             while (true) {
                 int actionType = in.nextInt();
                 switch (actionType){
                     case 1-> service.createClients();
-                    case 2-> service.markets();
+                    case 2-> service.getAllMarkets(Markets.values);
                     case 3-> service.getAllClients();
-                    case 4-> service.groceryShopping();
-                    case 5-> service.cheque();
+                    case 4-> service.getCheque();
+                    case 5-> service1.getAllProducts();
                 }
 
             }

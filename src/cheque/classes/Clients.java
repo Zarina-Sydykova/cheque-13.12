@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Clients {
     private String name;
-    private Integer bankCard;
+    private Integer bankCard;//ichinde akcha bolot
     private int bankCardPassword;
 
     public Clients(String name, Integer bankCard, int bankCardPassword) {
@@ -58,4 +58,6 @@ public class Clients {
                 + "Bank card password: " + bankCardPassword + "\n"
         );
     }
+
+
 }
