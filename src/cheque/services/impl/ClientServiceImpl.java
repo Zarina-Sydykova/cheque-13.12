@@ -11,6 +11,7 @@ import java.util.Scanner;
 
 public class ClientServiceImpl implements ClientService {
     List<Clients> clients = new ArrayList<Clients>();
+    List<Markets> markets = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
 
     @Override
@@ -23,18 +24,23 @@ public class ClientServiceImpl implements ClientService {
         Integer bankCardPassword = scanner.nextInt();
         Clients client = new Clients(name, bankCard, bankCardPassword);
         client.add(clients);
+        clients.add(client);
         System.out.println(clients);
         return "Client created successfully!";
     }
 
     @Override
     public Markets markets() {
+        System.out.println("~~~~~~~~All Markets~~~~~~~~~");
+        for (Markets market : markets) {
+            System.out.println(market.name);
+        }
 
         return markets();
     }
 
     @Override
-    public String getAllClients() {
+    public List<Clients>getAllClients() {
         System.out.println("\n\tHere is registered clients");
         if (this.clients.isEmpty()) {
             System.out.println("\nClient list is empty, please add some client");
@@ -43,7 +49,7 @@ public class ClientServiceImpl implements ClientService {
                 Clients.printUserInfo(this.clients.get(i));
             }
         }
-        return this.clients;
+        return clients;
     }
 
     @Override

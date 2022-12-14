@@ -8,7 +8,7 @@ import java.util.List;
 public interface ClientService {
     String createClients();
     Markets markets();
-    String getAllClients();
+   List<Clients> getAllClients();
     String groceryShopping();
     String cheque();
 }
