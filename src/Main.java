@@ -1,3 +1,9 @@
+import cheque.classes.Clients;
+import cheque.services.impl.ClientServiceImpl;
+
+import java.util.List;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         /*
@@ -19,5 +25,22 @@ public class Main {
 жана да кооздоп, кызыктуу логикаларды да кошсонуздар болот.
 Подсказка 2 класс продуктулар enum болсун, Продуктаны сатып
 * алган адамдын акчасы азайып магазиндин акчасы кобоюшу керек.Жок дегенде 10 метод ойлоп жазыныздар.*/
-    }
+        Scanner in = new Scanner(System.in);
+        ClientServiceImpl service = new ClientServiceImpl();
+            while (true) {
+                int actionType = in.nextInt();
+                switch (actionType){
+                    case 1-> service.createClients();
+                    case 2-> service.markets();
+                    case 3-> service.getAllClients();
+                    case 4-> service.groceryShopping();
+                    case 5-> service.cheque();
+                }
+
+            }
+        }
+
+
+
+
 }
